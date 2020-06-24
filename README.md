@@ -1,3 +1,8 @@
 # AWSLambdaExample
 
-A description of this package.
+### Create AWS Lambda package
+
+```
+% ./scripts/build-docker-image.sh
+% ./scripts/build-and-package.sh
+```
