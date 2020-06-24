@@ -15,13 +15,13 @@
 
 set -eu
 
-executable=$1
+executable=AWSLambdaExample
 workspace="$(pwd)"
 
 echo "-------------------------------------------------------------------------"
 echo "building \"$executable\" lambda"
 echo "-------------------------------------------------------------------------"
-docker run --rm -v "$workspace":/workspace -w /workspace/Examples/LambdaFunctions aws-lambda-builder bash -cl "swift build --product $executable -c release -Xswiftc -g"
+docker run --rm -v "$workspace":/workspace -w /workspace aws-lambda-builder bash -cl "swift build --product $executable -c release -Xswiftc -g"
 echo "done"
 
 echo "-------------------------------------------------------------------------"
